@@ -22,12 +22,16 @@ Provision and install a local Kubernetes cluster on a Mac OS via https://brew.sh
 
     brew cask install virtualbox
 
-. Install minikube
+. Either install minikube or update your existing minikube installation
 
+.. Installing minikube
     brew cask install minikube
+Verify the version:
 +
-If `minikube` has already been installed earlier, then you can update the install using the following command:
+    $ minikube version
+    minikube version: v0.23.0
 +
+.. Updating an existing minikube installation
     brew cask reinstall minikube
 +
 If you receive this error after `brew cask install minikube`:
@@ -39,12 +43,8 @@ Run this command:
 +
     $ sudo cp ~/Library/Caches/Homebrew/Cask/minikube--0.23.0 /usr/local/bin/minikube
 +
-Verify the version:
-+
-    $ minikube version
-    minikube version: v0.23.0
-+
-If `minikube` has already been installed earlier, you will also want to delete the previous minikube ISO:
+
+Finally delete the previous minikube ISO:
 +
     minikube delete
 +
